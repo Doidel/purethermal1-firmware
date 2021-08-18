@@ -111,7 +111,7 @@ extern USBD_HandleTypeDef hUsbDeviceFS;
 __ALIGN_BEGIN struct uvc_streaming_control videoCommitControl __ALIGN_END =
 {
   .bmHint = 0x00,
-  .bFormatIndex = VS_FMT_INDEX(Y16),
+  .bFormatIndex = VS_FMT_INDEX(YUYV),
   .bFrameIndex = 0x01,
   .dwFrameInterval = 0, 
   .wKeyFrameRate = 0,
@@ -119,7 +119,7 @@ __ALIGN_BEGIN struct uvc_streaming_control videoCommitControl __ALIGN_END =
   .wCompQuality = 0,
   .wCompWindowSize = 0,
   .wDelay = 0,
-  .dwMaxVideoFrameSize = MAX_FRAME_SIZE(80,60,VS_FMT_SIZE(Y16)),
+  .dwMaxVideoFrameSize = MAX_FRAME_SIZE(80,60,VS_FMT_SIZE(YUYV)),
   .dwMaxPayloadTransferSize = VIDEO_PACKET_SIZE_ALT1,
   .dwClockFrequency = 0,
   .bmFramingInfo = 0,
@@ -131,7 +131,7 @@ __ALIGN_BEGIN struct uvc_streaming_control videoCommitControl __ALIGN_END =
 __ALIGN_BEGIN struct uvc_streaming_control videoProbeControl __ALIGN_END =
 {
   .bmHint = 0x00,
-  .bFormatIndex = VS_FMT_INDEX(Y16),
+  .bFormatIndex = VS_FMT_INDEX(YUYV),
   .bFrameIndex = 0x01,
   .dwFrameInterval = 0, 
   .wKeyFrameRate = 0,
@@ -139,7 +139,7 @@ __ALIGN_BEGIN struct uvc_streaming_control videoProbeControl __ALIGN_END =
   .wCompQuality = 0,
   .wCompWindowSize = 0,
   .wDelay = 0,
-  .dwMaxVideoFrameSize = MAX_FRAME_SIZE(80,60,VS_FMT_SIZE(Y16)),
+  .dwMaxVideoFrameSize = MAX_FRAME_SIZE(80,60,VS_FMT_SIZE(YUYV)),
   .dwMaxPayloadTransferSize = VIDEO_PACKET_SIZE_ALT1,
   .dwClockFrequency = 0,
   .bmFramingInfo = 0,

@@ -258,7 +258,6 @@ PT_THREAD( usb_task(struct pt *pt))
 
           break;
         }
-        default:
         case VS_FMT_INDEX(Y16):
         {
           // while (uvc_xmit_row < 60 && count < VALDB(videoCommitControl.dwMaxPayloadTransferSize))
@@ -276,6 +275,7 @@ PT_THREAD( usb_task(struct pt *pt))
 
           break;
         }
+        default:
         case VS_FMT_INDEX(YUYV):
         {
           while (uvc_xmit_row < IMAGE_NUM_LINES && count < g_uvc_stream_packet_size)
